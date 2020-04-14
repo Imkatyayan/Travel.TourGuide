@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <style>
+          
+          body {
+              background-color: black;
+             
+         
+             
+          }
+          
+          .container-carousel {
+            background-color : black;
+              margin: 0px;
+              padding: 0px;
+              
+              height: 100vh;
+              width: auto;
+              background-size: cover;
+              background-position: center;
+          }
+          header{
+             
+              background-color: black;
+          /*    background-image: url(dynamic.gif);*/
+             
+          }
+          section{
+               
+              background-color: black;
+            /*  background-image: url(dynamic.gif);*/
+               
+          }
+          
+          .Navigation{
+            
+             position: absolute;
+top: 0;
+left : 0;
+width: 100%;
+background-color:black;
+box-shadow: 0 6px 6px  #16161d;
+z-index: 9999;
+height: 6%;
+          }
+          .update-event{
+              background-color: black;
+              margin-bottom: -200px;
+              ;
+          }         
+       /*   .row {
+      width : 1140px;
+      max-width: 0 auto;
+    } */
+          /*
+          .main-nav{
+float:right;
+list-style: none;
+margin-top:5px;
+padding-bottom: 350px;
+
+}
+.main-nav li{
+  color: white;
+  display: inline-block;
+  margin-left: 40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+  padding: 8px 0;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-bottom:  1px solid  #ff6700;
+  transition: border-bottom 0.5s;
+  font-family: arial;
+
+}
+.main-nav li a:hover{
+  border-bottom: 1px solid green;
+}
+*/
+          h2{
+              color: white;
+              font-weight: 300;
+word-spacing: 2px;
+              text-transform: uppercase;
+              font-size: 30px;
+              margin-left: 500px;
+              margin-bottom: -45px;
+              padding-top: -80px;
+              margin-top: 20px;
+          }
+          /*
+          h2{
+              color : #fff;
+  margin-top : 0;
+  margin-bottom: 20px;
+padding-top: 200px;
+padding-left: 200px;
+  font-size : 240%;
+  font-weight: 300;
+  letter-spacing : 1px;
+  word-spacing: 3px;
+text-transform: uppercase;
+
+          }
+          */
+          h1{
+              font-size: 30px;
+              padding-left: 150px;
+              margin-bottom: 20px;
+              text-transform: uppercase;
+          }
+          h1:after{
+  display: block;
+  height: 2px;
+  background-color: #ff6700;
+  content: " ";
+  width: 70px;
+margin-left: 30px;
+              margin-top: 10px;
+}
+          
+        h3{
+  color:  white;
+  text-align: center;
+  text-transform: uppercase;
+            font-size: 50px;
+            font-weight: 300;
+word-spacing: 2px;
+padding-left: 40px;
+padding-top: 35px;
+}
+h3:after{
+  display: block;
+  height: 2px;
+  background-color: #ff6700;
+  content: " ";
+  width: 120px;
+  margin: auto auto;
+  margin-top: 10px;
+    padding-right: 5px;
+}
+    
+          h4{
+              color: white;
+              text-transform: uppercase;
+              font-size: 20px;
+    
+          }
+          h4:after{
+  display: block;
+  height: 2px;
+  background-color: #ff6700;
+  content: " ";
+  width: 60px;
+  margin-left: 120px;
+    margin-top: 10px;
+}
+          h5{
+              color: white;
+              font-size: 20px;
+              margin-left: 520px;
+              padding: 10px;
+          }        
+          
+          
+          
+ 
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+     background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)) ,url(dynamic.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+  overflow-y: hidden;
+  transition: 0.6s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+        
+          
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: black;
+  color: black;
+ 
+    padding: 15px;
+    border-radius: 15px; 
+}
+
+.flip-card-back {
+  background-color: black;
+    opacity: 0.8;
+  color: white;
+  transform: rotateY(180deg);
+}          
+          
+          
+footer{
+    height: 80vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  background-image: url(bottom.png);
+    background-position: center;
+
+}
+          .foot{
+              position: fixed;
+               left: 0;
+   bottom: 0;
+   width: 100%;
+          }  
+          
+          .head{
+              position: fixed;
+              left: 0;
+   top: 0;
+   width: 100%;
+          }
+          
+          
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+   
+  overflow-x: hidden;
+  transition: 0.6s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}     
+          
+      .social-links{
+  list-style: none;
+  float: none;
+}
+.social-links li{
+  display: inline;
+  margin-right: 10px;
+}
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 35%;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 0px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.5;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-youtube {
+  background: black;
+  color: #bb0000;
+}
+
+.fa-instagram {
+  background:#bb0000;
+  color: white;
+}
+.fa-whatsapp {
+  background:  #25d366;
+  color: white;
+}
+      
+          
+          .row {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+
+}
+
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+/* .sticky { display: none; } */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		/*margin: 1% 0 1% 0%;*/
+        margin: 0;
+	}
+}
+.span-4-of-4 {
+	width: 100%;
+}
+
+.span-3-of-4 {
+	width: 74.6%;
+}
+
+.span-2-of-4 {
+	width: 49.2%;
+}
+
+.span-1-of-4 {
+	width: 23.8%;
+}
+
+@media only screen and (max-width: 480px) {
+	.span-4-of-4 {
+		width: 100%;
+	}
+	.span-3-of-4 {
+		width: 100%;
+	}
+	.span-2-of-4 {
+		width: 100%;
+	}
+	.span-1-of-4 {
+		width: 100%;
+	}
+}
+.span-2-of-2 {
+	width: 100%;
+}
+
+.span-1-of-2 {
+	width: 45%;
+}
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	
+	.span-2-of-2 {
+		width: 100%;
+	}
+	.span-1-of-2 {
+		width: 100%;
+	}
+}          
+          .image{
+              padding: 50px;
+              margin-left: 30px;
+              width: 90%;
+              height: 90%;
+              position: relative;
+             border: 2px solid  #ff6700;
+              border-radius: 38px;
+ 
+  
+          }   
+          
+          .containers{
+            
+          }
+          
+.containers:hover .overplays {
+  opacity: 0.9;
+     -ms-transform: scale(0.9); /* IE 9 */
+  -webkit-transform: scale(0.9); /* Safari 3-8 */
+  transform: scale(0.9); 
+     transition: transform .7s;
+}
+   .aboutext{
+       width:380px;
+       height: 350px;
+        border: 2px solid #ff6700;
+       padding-top: 20px;
+       line-height: 40px;
+           padding-left: 50px;
+            margin-left: 150px;
+                font-size: 15px;
+                color: white;
+                background-color:black;
+                
+            }
+          .aboutext:hover{
+               transform: rotateY(180deg);
+             /*color: white;
+background-color:limegreen;
+border: none; 
+            text-decoration: none;*/
+             -ms-transform: scale(0.9); /* IE 9 */
+  -webkit-transform: scale(0.9); /* Safari 3-8 */
+  transform: scale(0.9); 
+     transition: transform .8s; 
+          }    
+          .text{
+             
+              padding-left: 20px;
+            margin-left: 50px;
+             color: white;
+              font-size: 15px; 
+              background-color: black;
+              position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+          }
+         
+          @keyframes example {
+  0%   {background-color:black; left:0px; top:-60px;}
+ 
+  100% {background-color:black; left:0px; top:0px;}
+}
+          .logo{
+              border: 2px solid #ff6700;
+  border-radius: 50%;
+  padding: 5px;
+  width: 100px;
+              margin-left: 1220px;
+              margin-bottom: 5px;
+              margin-top: 5px;
+          }
+         
+          .packages{
+              padding-left: 50px;
+              padding-right: 50px;
+              padding-top: 30px;
+             
+          }
+          .packages01{
+              padding-bottom: 70px;
+              padding-left: 50px;
+              padding-right: 50px;
+          }
+          
+        .contain {
+  position: relative;
+  width: 50%;
+            height: 100%;
+}
+
+.imag {
+/*
+  border: 2px solid #ff6700;
+    padding: 15px;
+    border-radius: 28px;  */
+    position: relative;
+  width: 200%;
+  height: 200%;
+     
+}
+
+.overl {
+   
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:black;
+  overflow: hidden;
+  width: 200%;
+  height: 0;
+  transition: .5s ease;
+    opacity: 0.9;
+}
+
+.contain:hover .overl {
+  height: 50%;
+    
+}
+
+.tex {
+    padding-bottom: 10px;
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}  
+          .button{
+               font-family: 'Airal';
+  border-radius: 5px;
+  border:none;
+position: absolute;
+  cursor:pointer;
+  font-size:20px;
+  font-weight:bold;
+  padding : 5px 25px;
+  font-weight : 300;
+  color:white;
+text-decoration: none;
+
+transition: background-color 0.5s , color 0.5s;
+                  
+          }        
+          .btn-pack{
+              
+                margin-top: 60px;
+              margin-left: 75px;
+    background:black;
+          }   
+        .button:hover{
+            color: white;
+background-color:limegreen;
+border: none; 
+            text-decoration: none;
+             -ms-transform: scale(0.8); /* IE 9 */
+  -webkit-transform: scale(0.8); /* Safari 3-8 */
+  transform: scale(0.8); 
+     transition: transform .8s;
+          }
+          .zone-card{
+              color: white;
+              text-decoration: none;
+              font-size: 15px;
+              line-height: 25px;
+          }
+          .zone-card:hover {
+              color: limegreen;
+              text-decoration: none;
+          }
+          
+          .container {
+     width: 600px; 
+    height: 250px;
+
+    margin: 2em 425px;
+    overflow: hidden;
+    background: black;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.marquee {
+    font-size: 15px;
+    color: white;
+   
+    position: relative;
+    box-sizing: border-box;
+    animation: marquee 8s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+}
+
+/* Make it move! */
+@keyframes marquee {
+    0%   { top:   8em }
+    100% { top: -11em }
+}
+
+/* Make it look pretty */
+.microsoft .marquee {
+	margin: 0;
+    padding: 20px;
+    line-height: 20px;
+    font: 1em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+.microsoft:before, .microsoft::before,
+.microsoft:after,  .microsoft::after {
+    left: 0;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    width: 600px; 
+    height: 350px;
+   
+  
+}
+
+.microsoft:after, .microsoft::after {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.microsoft:before, .microsoft::before {
+    top: 0;
+}
+
+/* Style the links */
+.vanity {
+    color: #333;
+    text-align: center;
+    font: .75em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+.vanity a, .microsoft a {
+    font-size: 15px;
+    color: #1570A6;
+    transition: color .5s;
+    text-decoration: none;
+}
+
+.vanity a:hover, .microsoft a:hover {
+    color: #F65314;
+}
+
+/* Style toggle button */
+          /*
+.toggle {
+	display: block;
+    background-color: #ff6700;
+    margin: 2em auto;
+}   */  
+       
+    </style>
+    
+</head>
+    
+<body>
+
+   <section class="Navigation">
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+   
+<span style="font-size:25px;cursor:pointer;color:white;padding-left: 10px; " onclick="openNav()">&#9776; User Menu</span>
+
+
+    <img src="logo.png" alt="" class="logo">
+
+    <script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
+    </section>
+<div class="container-carousel">
+   
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+      
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        
+      <div class="item active">
+          
+        <img src="dal-lake-1.jpg" alt="Los Angeles" style="width:100%;height:95vh;">
+         
+          <div class="carousel-caption">
+              <!--
+              <nav class="">
+<div class="row">
+  <ul class="main-nav">
+    <li><a href="#features">How this works</a></li>
+      <li><a href="#quotes">Our Stories</a></li>
+          <li><a href="#team">About Us</a></li>
+            <li><a href="#foot">Contact Us</a></li>
+              <li><a href="http://drupal-8-8-1-serve.dd:8083/">Serve India</a></li>
+  </ul>
+</div>
+  </nav>
+              -->
+              
+              
+              
+          <h3>Dal Lake</h3>
+         
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="himalyas.jpg" alt="Chicago" style="width:100%; height:95vh;">
+          <div class="carousel-caption">
+          <h3>Himalayas</h3>
+          
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="Varanasi.jpg" alt="New york" style="width:100%;height:95vh;">
+          <div class="carousel-caption">
+          <h3>Varansi</h3>
+          
+        </div>
+      </div>
+        
+        <div class="item">
+        <img src="sea-link.jpg" alt="New york" style="width:100%;height:95vh;">
+          <div class="carousel-caption">
+          <h3>Bandra-Worli Sea Link</h3>
+       
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+    <header>
+        <div class="row">
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="Railways.jpg" alt="" class="image">
+                          
+                    </div>
+                       </div>
+                </div>
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> Railways <br>
+                        </h1>
+                        The first railway proposals for India were made in Madras in 1832.[9] The country's first train, Red Hill Railway (built by Arthur Cotton to transport granite for road-building), ran from Red Hills to the Chintadripet bridge in Madras in 1837.[9] In 1845, the Godavari Dam Construction Railway was built by Cotton at Dowleswaram in Rajahmundry, to supply stone for the construction of a dam over the Godavari River. In 1851, the Solani Aqueduct Railway was built by Proby Cautley in Roorkee to transport construction materials for an aqueduct over the Solani River.[9]
+
+India's first passenger train, hauled by three steam locomotives (Sahib, Sindh and Sultan), ran for 34 kilometres (21 mi) with 400 people in 14 carriages on 1,676 mm (5 ft 6 in) broad gauge track between Bori Bunder (Mumbai) and Thane on 16 April 1853.[10][11] The Thane viaducts, India's first railway bridges, were built over the Thane creek when the Mumbai-Thane line was extended to Kalyan in May 1854.[12] Eastern India's first passenger train ran 39 km (24 mi) from Howrah, near Kolkata, to Hoogly on 15 August 1854.[1] The first passenger train in South India ran 97 km (60 mi) from Royapuram- Veyasarapady (Madras) to Wallajah Road (Arcot) on 1 July 1856. <a href="https://www.irctc.co.in/nget/train-search">Book Here</a>
+                    </div>
+                </div>
+               
+            </div>
+    </header>
+    
+    <section class="hotels">
+    <div class="row">
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1>Hotels <br>
+                        </h1>
+                       Jamsetji Nusserwanji Tata, founder of the Tata Group, opened the Taj Mahal Palace, a hotel in Mumbai (formerly called Bombay) overlooking the Arabian Sea, on 16 December 1903. It was the first Taj property and the first Taj hotel. There are several anecdotal stories about why Tata opened the Taj hotel. According to a story, he decided to open the hotel after an incident involving racial discrimination at the Watson's Hotel in Mumbai, where he was refused entry as the hotel permitted only Europeans.[8] Hotels that accepted only European guests were very common across British India then. According to another story, he opened the hotel when one of his friends expressed disgust over the hotels that were present in Bombay then. But a more plausible reason was advanced by Lovat Fraser, a close friend of the Tata and one of the early directors of the IHCL group, that the idea had long been in his mind and that he had made a study on the subject. He did not have any desire to own a hotel but he wanted to attract people to India and to improve Bombay. It is said that Jamsetji Tata had travelled to places like London, Paris, Berlin, and Düsseldorf to arrange for materials and pieces of art, furniture and other interior decor for his hotel.[9] The Taj group has since then developed and flourished, under the Tata Group. <a href="https://www.booking.com/">Book Here</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="hotel.jpg" alt="" class="image">
+                    </div>
+                       </div>
+                </div>  
+            </div>
+    </section>
+    
+    <section class="culture">
+    <div class="row">
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="food1.jpg" alt="" class="image">
+                    </div>
+                       </div>
+                </div>
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> cuisines <br>
+                        </h1>
+                        Indian cuisine consists of a wide variety of regional and traditional cuisines native to the Indian subcontinent. Given the range of diversity in soil type, climate, culture, ethnic groups, and occupations, these cuisines vary substantially from each other and use locally available spices, herbs, vegetables, and fruits. Indian food is also heavily influenced by religion, in particular Hinduism, cultural choices and traditions.[1] The cuisine is also influenced by centuries of Islamic rule, particularly the Mughal rule. Samosas and pilafs can be regarded as examples.
+
+Historical events such as foreign invasions, trade relations, and colonialism have played a role in introducing certain foods to this country. The Columbian discovery of the New World brought a number of new vegetables and fruit to India. A number of these such as the potato, tomatoes, chillies, peanuts, and Guava have become staples in many regions of India. Indian cuisine has shaped the history of international relations; the spice trade between India and Europe was the primary catalyst for Europe's Age of Discovery.[4] Spices were bought from India and traded around Europe and Asia. Indian cuisine has influenced other cuisines across the world, especially those from Europe (especially Britain), the Middle East, Southern African, East Africa, Southeast Asia, North America, Mauritius, Fiji, Oceania, and the Caribbean. <a href="https://www.zomato.com/">Book Here</a>
+                    </div>
+                </div>
+               
+            </div>
+    </section>
+    
+     <section class="food">
+    <div class="row">
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> culture <br>
+                        </h1>
+                       The culture of India refers collectively to the thousands of distinct and unique cultures of all religions and communities present in India. India's languages, religions, dance, music, architecture, food and customs differ from place to place within the country. Many elements of India's diverse cultures, such as Indian religions, philosophy, cuisine, languages, dance, music and movies have a profound impact across the Indosphere, Greater India and the world. India has 29 states with different culture and the second most populated country in the world. The Indian culture, often labeled as an amalgamation of several various cultures, spans across the Indian subcontinent and has been influenced and shaped by a history that is several thousand years old. Throughout the history of India, Indian culture has been heavily influenced by Dharmic religions. They have been credited with shaping much of Indian philosophy, literature, architecture, art and music. Greater India was the historical extent of Indian culture beyond the Indian subcontinent. This particularly concerns the spread of Hinduism, Buddhism, architecture, administration and writing system from India to other parts of Asia through the Silk Road by the travellers and maritime traders during the early centuries of the Common Era. To the west, Greater India overlaps with Greater Persia in the Hindu Kush and Pamir Mountains. Over the centuries, there has been a significant fusion of cultures between Buddhists, Hindus, Muslims, Jains, Sikhs and various tribal populations in India. <a href="https://www.indiaculture.nic.in/">Know More</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="culture.png" alt="" class="image">
+                    </div>
+                       </div>
+                </div>  
+            </div>
+    </section>
+    
+     <section class="places">
+    <div class="row">
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="lucknow.jpg" alt="" class="image">
+                    </div>
+                       </div>
+                </div>
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> history <br>
+                        </h1>
+                        According to consensus in modern genetics anatomically modern humans first arrived on the Indian subcontinent from Africa between 73,000 and 55,000 years ago. However, the earliest known human remains in South Asia date to 30,000 years ago. Settled life, which involves the transition from foraging to farming and pastoralism, began in South Asia around 7,000 BCE. At the site of Mehrgarh, Balochistan, Pakistan, presence can be documented of the domestication of wheat and barley, rapidly followed by that of goats, sheep, and cattle. By 4,500 BCE, settled life had spread more widely, and began to gradually evolve into the Indus Valley Civilization, an early civilization of the Old world, which was contemporaneous with Ancient Egypt and Mesopotamia. This civilisation flourished between 2,500 BCE and 1900 BCE in what today is Pakistan and north-western India, and was noted for its urban planning, baked brick houses, elaborate drainage, and water supply. <a href="https://knowindia.gov.in/culture-and-heritage/ancient-history.php">Know More</a>
+                    </div>
+                </div>
+               
+            </div>
+    </section>
+    
+     <section class="nature">
+    <div class="row">
+               
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> nature <br>
+                        </h1>
+                        A fall of water is an area where water flows over a vertical drop or a series of steep drops in the course of a stream or river. Waterfalls also occur where meltwater drops over the edge of a tabular iceberg or ice shelf. Waterfalls are commonly formed in the upper course of a river where lakes fall into in steep mountains. Because of their landscape position, many waterfalls occur over bedrock fed by little contributing area, so they may be ephemeral and flow only during rainstorms or significant snowmelt. The further downstream, the more perennial a waterfall can be. Waterfalls can have a wide range of widths and depths. When the river courses over resistant bedrock, erosion happens slowly and is dominated by impacts of water-borne sediment on the rock, while downstream the erosion occurs more rapidly. As the watercourse increases its velocity at the edge of the waterfall, it may pluck material from the riverbed, if the bed is fractured or otherwise more erodible. Hydraulic jets and hydraulic jumps at the toe of a falls can generate large forces to erode the bed, especially when forces are amplified by water-borne sediment. Horseshoe-shaped falls focus the erosion to a central point, also enhancing riverbed change below a waterfalls.
+                        <a href="https://www.nature.org/en-us/about-us/where-we-work/india/stories-in-india/india-a-land-of-natural-wonders/">Know More</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="waterfalls.jpg" alt="" class="image">
+                    </div>
+                       </div>
+                </div>
+            </div>
+    </section>
+   
+    <section class="packages">
+        <h3> Travel Packages
+        </h3>
+    <div class="row">
+        <div class="col span-1-of-4">
+                    <div class="contain">
+  <img src="pack-si.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">The Kerala backwaters</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div>
+                <div class="col span-1-of-4">
+                  
+<div class="contain">
+  <img src="pack-ni.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">The Mugal Era</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div>  
+         <div class="col span-1-of-4">
+                  <div class="contain">
+  <img src="KEDARNATH.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Lord Shiva</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div>  
+         <div class="col span-1-of-4">
+                   <div class="contain">
+  <img src="rameshwaram.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Ramaswarem</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div>  
+                </div>
+    </section>
+    
+    <section class="packages01">
+    <div class="row">
+        <div class="col span-1-of-4">
+                   <div class="contain">
+  <img src="wildlife.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Wildlife Parks</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div> 
+        <div class="col span-1-of-4">
+                   <div class="contain">
+  <img src="jamamasjid.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Old Delhi</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div> 
+        <div class="col span-1-of-4">
+                   <div class="contain">
+  <img src="lucknow-metro.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Travel Pass</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div> 
+        <div class="col span-1-of-4">
+                   <div class="contain">
+  <img src="la.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Winters</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div> 
+
+        </div>
+    </section>
+    
+    <section class="About-India">
+    <div class="row">
+                <div class="col span-1-of-2">
+                    <div class="text">
+                    <h1>Country info<br>
+                    </h1>
+                    </div>
+                  <div class="aboutext">
+                    
+                      Currency : Indian Rupyee (INR)<br>
+                      Population : 1.3 Billion<br>
+                      Time Zone :UTC+5:30<br>
+                      Capital : New Delhi<br>
+                      Area : 3.287 million km2 <br>
+                      States : 28<br>
+                      Union territories : 8<br>
+                      Country Code : +91
+                    </div>
+                </div>
+         <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> About india <br>
+                        </h1>
+                       Tourism in India has shown a phenomenal growth in the past decade. One of the reasons is that the Ministry of tourism, India has realized the immense potential of tourism in India during vacations. India travel tourism has grown rapidly with a great influx of tourists from all across the globe who have been irresistibly attracted to the rich culture, heritage, and incredible natural beauty of India. India tourism with its foggy hill stations, captivating beaches, historical monuments, golden deserts, serene backwaters, pilgrimage sites, rich wildlife, and colourful fairs capture the heart of every tourist. In addition, a variety of festivals, lively markets, vibrant lifestyle, and traditional Indian hospitality, will make your experience as an india tourist truly unforgettable and fantastic. Travel through the lovely Indian states and discover closely the resplendent colors and rich cultural locales of this incredible land. Our India tourism guide provides you a glimpse of travel and tourism in india ,india tourism information about south india tourism, north India tourism, and all the major tourist destinations, and tourism services of India.
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+    <section class="packages">
+    <div class="row">
+        <div class="col span-1-of-4">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="north-india.jpg" alt="Avatar" style="width:300px;height:220px;">
+    </div>
+    <div class="flip-card-back">
+      <h4>NORTH INDIA</h4> 
+    <a class="zone-card" href="http://www.uptourism.gov.in/">Uttar Pradesh</a><br>
+     <a class="zone-card" href="http://delhitourism.gov.in/">Delhi</a>    <br>
+         <a class="zone-card" href="https://himachaltourism.gov.in/"> Himachal Pradesh</a><br>
+         <a class="zone-card" href="http://bstdc.bih.nic.in/">Bihar</a><br>      
+      <a class="zone-card" href="http://punjabtourism.gov.in/">Punjab</a><br>  
+        <a class="zone-card" href="https://uttarakhandtourism.gov.in/">Uttrakhand</a><br>  
+       <a class="zone-card" href="http://haryanatourism.gov.in/">Haryana</a><br>  
+        <a class="zone-card" href="http://www.jktourism.jk.gov.in/">Jammu & Kashmir</a><br>  
+    </div>
+  </div>
+</div>
+        </div>
+         <div class="col span-1-of-4">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="south-india.jpg" alt="Avatar" style="width:300px;height:220px;">
+    </div>
+    <div class="flip-card-back">
+      <h4>South India</h4> 
+     <a class="zone-card" href="https://www.telanganatourism.gov.in/">Telangana</a><br>
+     <a class="zone-card" href="https://tourism.ap.gov.in/">Andhra Pradesh</a>    <br>
+         <a class="zone-card" href="http://www.tamilnadutourism.org/"> Tamil Nadu</a><br>
+         <a class="zone-card" href="https://www.karnatakatourism.org/">Karnataka</a><br>     
+       <a class="zone-card" href="https://www.keralatourism.org/">Kerela</a><br>  
+      <a class="zone-card" href="http://goatourism.gov.in/">Goa</a><br>  
+        <a class="zone-card" href="http://www.pondytourism.in/">Puducherry</a><br>  
+       <a class="zone-card" href="https://www.andamantourism.gov.in/">Andaman & Nicobar Islands</a><br>  
+        
+    </div>
+  </div>
+</div>
+        </div>
+         <div class="col span-1-of-4">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="west-india.jpg" alt="Avatar" style="width:300px;height:220px;">
+    </div>
+    <div class="flip-card-back">
+      <h4>West & Central India</h4> 
+     <a class="zone-card" href="http://www.tourism.rajasthan.gov.in/">Rajasthan</a><br>
+     <a class="zone-card" href="https://www.gujarattourism.com/">Gujrat</a>    <br>
+         <a class="zone-card" href="https://www.maharashtratourism.gov.in/">Maharashtra</a><br>
+          <a class="zone-card" href="http://www.mptourism.com/">Madhya Pradesh</a><br>  
+         <a class="zone-card" href="http://cggovttourism.ddns.net/">Chhattisgarh</a><br>     
+       <a class="zone-card" href="http://odishatourism.gov.in/">Odisha</a><br>  
+      <a class="zone-card" href="https://jharkhandtourism.gov.in/">Jharkhand</a><br>  
+        
+    </div>
+  </div>
+</div>
+        </div>
+         <div class="col span-1-of-4">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="east-india.jpg" alt="Avatar" style="width:300px;height:220px;">
+    </div>
+    <div class="flip-card-back">
+      <h4>East India</h4> 
+     <a class="zone-card" href="http://www.tourism.rajasthan.gov.in/">Rajasthan</a><br>
+     <a class="zone-card" href="https://www.gujarattourism.com/">Gujrat</a>    <br>
+         <a class="zone-card" href="https://www.maharashtratourism.gov.in/">Maharashtra</a><br>
+         <a class="zone-card" href="http://cggovttourism.ddns.net/">Chhattisgarh</a><br>     
+       <a class="zone-card" href="http://odishatourism.gov.in/">Odisha</a><br>  
+      <a class="zone-card" href="https://jharkhandtourism.gov.in/">Jharkhand</a><br>  
+        
+    </div>
+  </div>
+</div>
+        </div>
+        </div>
+
+    </section>
+    
+    <section class="update-event">
+        <h3> Upcoming Events</h3>
+    <div class="microsoft container">
+ <!-- <p class="marquee">Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the <a href="https://windows.microsoft.com/en-US/windows-8/start-screen">Start screen</a>, <a href="https://windows.microsoft.com/en-US/windows-8/charms">charms</a>, and a <a href="https://windows.microsoft.com/en-US/windows-8/microsoft-account">Microsoft account</a>, you can spend less time searching and more time doing.</p> -->
+       <p class="marquee">
+            The Great Indian Travel Bazaar  <a href="https://10times.com/gitb">(GITB)</a> <br>
+India Tourism Conclave <a href="https://10times.com/india-tourism-conclave-new-delhi"> New Delhi </a> <br>
+International Conference on Rural Tourism - Challenges, Scope and Entrepreneurship Development<a href="https://10times.com/international-conference-on-rural-tourism"> Dheradun</a> <br>
+International Tourism Exhibition <a href="https://10times.com/sittf">(ITE)</a> <br>
+Tourism Expo India <a href="https://10times.com/tourism-expo-india">(TEI Kolkata)</a> <br>
+International Travel Roadshow <a href="https://10times.com/itr-new-delhi">(ITR)</a><br>
+Travel & Tourism Fair-Kolkata <a href="https://10times.com/travel-tourism-kolkata">(TTF)</a><br>
+Travel and Tourism Fair - Hyderabad <a href="https://10times.com/travel-tourism-hyderabad">(TTF SOUTH)</a><br>
+India International Travel Mart Bangalore <a href="https://10times.com/iitm-bangalore">(IITM Bangalore)</a><br>
+International Conference on Sustainable Tourism <a href="https://10times.com/icst-kolkata">(ICST)</a><br>
+Global Residency & Citizenship Expo <a href="https://10times.com/grace-india">(GRACE)</a><br>
+Islamic Travel Mart<a href="https://10times.com/itm-mumbai"> (ITM)</a><br>
+Diving Resort Travel Show India <a href="https://10times.com/drt-mumbai">(DRT)</a><br>
+ADEX India Ocean Festival - Mumbai Dive Show<a href="https://10times.com/adex-mumbai"> Mumbai</a>
+        </p>
+</div>
+<p class="vanity">
+    <a href="https://twitter.com/jonathansampson">@Team</a> of 
+    <a href="https://twitter.com/appendTo">@Travel.TourGuide</a>   
+</p>
+        <h5> Copyright &copy;. All rights reserved.</h5> 
+    </section>
+    
+    
+    <footer>
+        <div class="foot" id="end">
+        <!--
+                       <div>
+                           <ul class="social-links">
+                               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                               <li><a href="#"><i class="fa fa-google"></i></a></li>
+                               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                               <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                           </ul>
+                       </div>
+-->
+                   
+        
+<div id="mySidebar" class="sidebar">
+                           <div>
+                               <a href="#"> &nbsp; Contact Us</a>
+                           <ul class="social-links">
+                               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                               <li><a href="#"><i class="fa fa-google"></i></a></li>
+                               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                               <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                           </ul>
+                       </div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">×</a>
+  
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav1()">  &#x2709;</button>
+        </div>
+        <script>
+function openNav1() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav1() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+            </div>
+               </footer>
+    
+</body>
+</html>
