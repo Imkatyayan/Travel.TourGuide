@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="project.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
+    <title>Payment</title>
+    <style>
+        #main{
+    max-width: 100%;
+    height: 100vh;
+    position: relative;
+  transition: 1.5s;
+    background-position: center;
+    background-size: cover; 
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    color: #fff;
+    display: inline-block;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.circle-box{
+    position: absolute;
+    height: 450px;
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#svgcircle{
+    stroke-dasharray: 1256;
+    stroke-dashoffset: 1256;
+    transition: 1s;
+    
+}
+.circle-box span{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: #fff;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    z-index: 10;
+}
+#step1{
+ right: 160px;
+  bottom: 30px;
+}
+#step2{
+ left: 56px;
+  bottom: 106px;
+}
+#step3{
+ left: 60px;
+  top : 100px;
+}
+#step4{
+ right: 156px;
+  top : 30px;
+}
+#step5{
+ right: 20px;
+  top : 220px;
+}
+.user-box{
+    width: 350px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    color: #fff;
+    transition: 1s;
+}
+.user img{
+    width: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+.social img{
+    width: 40px;
+    border-radius: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.user-box p{
+    margin: 20px 0;
+    color: #c0c0c0;
+    line-height: 25px;
+}
+.user{
+    height: 450px;
+}
+
+
+
+    </style>
+    </head>  
+    <body>
+        <div id="main">
+        <div class="navbar">
+       
+        </div>
+        <div class="circle-box">
+        <svg height="402" width="402">
+            <circle r="200" cx="201" cy="200" stroke-width="1px" stroke="gray" fill="none"/>
+            </svg>
+             <svg height="402" width="402">
+            <circle r="200" cx="201" cy="200" stroke-width="2px" stroke="white" fill="none" id="svgcircle"/>
+            </svg>
+            <div>
+            <span id="step1"></span>
+            <span id="step2"></span>
+            <span id="step3"></span>   
+            <span id="step4"></span>
+            <span id="step5"></span>
+    
+            </div>
+            <div class="user-box" id="userboxx">
+            <div class="user">
+                <img src="person-1.jpg">
+                <h1>XYZ</h1>
+                <p>This is my profile, kindly go through it.</p>
+                <div class="social">
+                <img src="facebook.png">
+                <img src="instagram.png">
+                <img src="linkedin.png"> 
+                    <img src="twitter.png">
+                </div>
+                </div>
+            <div class="user">
+                <img src="person-2.jpg">
+                <h1>ABC</h1>
+                <p>This is my profile, kindly go through it.</p>
+                <div class="social">
+                <img src="facebook.png">
+                <img src="instagram.png">
+                <img src="linkedin.png"> 
+                    <img src="twitter.png">
+                </div>
+                </div>
+    
+            <div class="user">
+                <img src="person-3.jpg">
+                <h1>ABCdef</h1>
+                <p>This is my profile, kindly go through it.</p>
+                <div class="social">
+                <img src="facebook.png">
+                <img src="instagram.png">
+                <img src="linkedin.png"> 
+                    <img src="twitter.png">
+                </div>
+                </div>
+            
+            <div class="user">
+                <img src="person-4.jpg">
+                <h1>ABCdef</h1>
+                <p>This is my profile, kindly go through it.</p>
+                <div class="social">
+                <img src="facebook.png">
+                <img src="instagram.png">
+                <img src="linkedin.png"> 
+                    <img src="twitter.png">
+                </div>
+                </div>
+            
+            <div class="user">
+                <img src="person-5.jpg">
+                <h1>ABCdef</h1>
+                <p>This is my profile, kindly go through it.</p>
+                <div class="social">
+                <img src="facebook.png">
+                <img src="instagram.png">
+                <img src="linkedin.png"> 
+                    <img src="twitter.png">
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+         <script>
+        var svgcircle = document.getElementById("svgcircle");
+         var step1 = document.getElementById("step1");  var step2 = document.getElementById("step2");
+             var step3 = document.getElementById("step3");
+             var step4 = document.getElementById("step4");
+             var step5 = document.getElementById("step5");
+            var main = document.getElementById("main");
+            var ub = document.getElementById("userboxx");
+            
+            main.style.backgroundImage = "url(img-1.jpg)";
+            step1.addEventListener('click',()=>{
+            svgcircle.style.strokeDashoffset="1004";
+                  main.style.backgroundImage = "url(img-2.jpg)";
+                ub.style.top="-350px";
+                 });
+             step2.addEventListener('click',()=>{
+            svgcircle.style.strokeDashoffset="753";
+                   main.style.backgroundImage = "url(img-3.jpg)";
+                 ub.style.top="-800px";
+                 });
+             step3.addEventListener('click',()=>{
+            svgcircle.style.strokeDashoffset="502";
+                   main.style.backgroundImage = "url(img-4.jpg)";
+                 ub.style.top="-1250px";
+                 });
+             step4.addEventListener('click',()=>{
+            svgcircle.style.strokeDashoffset="251";
+                   main.style.backgroundImage = "url(img-5.jpg)";
+                 ub.style.top="-1700px";
+                 });
+             step5.addEventListener('click',()=>{
+            svgcircle.style.strokeDashoffset="0";
+                   main.style.backgroundImage = "url(img-1.jpg)"; 
+                 ub.style.top="100px";
+                 });
+        </script>
+    </body>
+</html>
